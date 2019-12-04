@@ -44,8 +44,8 @@
 
             <me.biubiubiu.justifytext.library.JustifyTextView
                 android:id="@+id/textView12"
-                android:layout_width="371dp"
-                android:layout_height="153dp"
+                android:layout_width="355dp"
+                android:layout_height="197dp"
                 android:text="DogeeKu adalah perusahaan yang berfokus pada pelayanan anjing. Do-geeKu menawarkan pelayanan berupa klinik anjing, salon anjing, penitipan ajing, dan toko anjing. DogeeKu telah berdiri sejak 2016 dan telah menjadi kepercayaan customer DogeeKu.  "
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
