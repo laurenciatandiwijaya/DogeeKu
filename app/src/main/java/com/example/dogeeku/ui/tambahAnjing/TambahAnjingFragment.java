@@ -30,7 +30,7 @@ public class TambahAnjingFragment extends Fragment {
         View v = inflater.inflate(R.layout.tambah_anjing_fragment, container, false);
 
         String [] values =
-                {"Cihuahua","Bulldog","Pomerian","Husky","Samoyed","Golden","Malamute",};
+                {"Cihuahua","Bulldog","Pomerian","Husky","Samoyed","Golden","Malamutenn",};
         Spinner spinner = (Spinner) v.findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
