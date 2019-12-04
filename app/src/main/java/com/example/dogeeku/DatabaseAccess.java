@@ -82,8 +82,6 @@ public class DatabaseAccess {
         else{
             return "kosong";
         }
-
-
     }
 
     public void insert(String namaDB, String emailDB, String passwordDB) {
