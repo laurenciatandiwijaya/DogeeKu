@@ -82,8 +82,6 @@ public class DatabaseAccess {
         else{
             return "kosong";
         }
-
-
     }
 
     public void insert(String namaDB, String emailDB, String passwordDB) {
@@ -92,5 +90,29 @@ public class DatabaseAccess {
         contentValue.put("email", emailDB);
         contentValue.put("password", passwordDB);
         database.insert("pengguna", null, contentValue);
+    }
+
+    public List<String> getNama_Barang() {
+        List<String> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT * FROM barang", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(1));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return list;
+    }
+
+    public List<String> getHarga_Barang() {
+        List<String> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT * FROM barang", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(2));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return list;
     }
 }
