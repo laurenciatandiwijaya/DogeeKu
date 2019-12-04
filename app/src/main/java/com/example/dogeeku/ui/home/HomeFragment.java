@@ -1,12 +1,16 @@
 package com.example.dogeeku.ui.home;
 
 import android.content.Intent;
+import android.graphics.PixelFormat;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.VideoView;
+
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -41,6 +45,17 @@ public class HomeFragment extends Fragment {
         Button button_klinik = (Button) v.findViewById(R.id.button_klinik);
         Button button_salon = (Button) v.findViewById(R.id.button_salon);
         Button button_penitipan = (Button) v.findViewById(R.id.button_penitipan);
+        Button button_shop = (Button) v.findViewById(R.id.button_shop);
+
+        VideoView video = (VideoView) v.findViewById(R.id.videoView);
+
+        getActivity().getWindow().setFormat(PixelFormat.UNKNOWN);
+
+        String uriPath2 = "android.resource://com.example.dogeeku/"+R.raw.layanansalon1;
+        Uri uri2 = Uri.parse(uriPath2);
+        video.setVideoURI(uri2);
+        video.requestFocus();
+        video.start();
 
         button_klinik.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +87,14 @@ public class HomeFragment extends Fragment {
                 manager.beginTransaction()
                         .replace(R.id.nav_host_fragment, layananPenitipanFragment, layananPenitipanFragment.getTag())
                         .commit();
+            }
+        });
+
+        button_shop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent register = new Intent (getActivity(), ShopActivity.class);
+                startActivity(register);
             }
         });
 
