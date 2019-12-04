@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         Button button_login = (Button) headerView.findViewById(R.id.button_login);
         Button button_register = (Button) headerView.findViewById(R.id.button_register);
 
-
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home,R.id.nav_shop,R.id.nav_pemesanan,R.id.nav_planner,R.id.nav_tambah_anjing, R.id.nav_reservasi)
                 .setDrawerLayout(drawer)

@@ -6,11 +6,13 @@
     <group android:checkableBehavior="single">
         <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/ic_menu_camera"
         android:title="@string/menu_home" />
     </group>
 
-    <item android:title="DogeeKu Shop">
+    <item
+        android:title="DogeeKu"
+        >
+
         <menu>
             <item
                 android:id="@+id/nav_shop"
@@ -19,19 +21,11 @@
             <item
             android:id="@+id/nav_pemesanan"
             android:title="@string/menu_pemesanan" />
-        </menu>
-    </item>
 
-    <item android:title="DogeeKu Planner">
-        <menu>
             <item
                 android:id="@+id/nav_planner"
                 android:title="@string/menu_planner" />
-        </menu>
-    </item>
 
-    <item android:title="AnjingKu">
-        <menu>
             <item
                 android:id="@+id/nav_tambah_anjing"
                 android:title="@string/menu_tambah_anjing" />
@@ -39,6 +33,11 @@
             <item
                 android:id="@+id/nav_reservasi"
                 android:title="@string/menu_reservasi" />
+
+            <item
+                android:id="@+id/nav_contactUs"
+                android:title="@string/menu_contactUs" />
+
         </menu>
     </item>
 </menu>
