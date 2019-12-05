@@ -36,7 +36,7 @@ public class HomeFragment extends Fragment {
 
         getActivity().getWindow().setFormat(PixelFormat.UNKNOWN);
 
-        String uriPath2 = "android.resource://com.example.dogeeku/"+R.raw.layanansalon1;
+        String uriPath2 = "android.resource://com.example.dogeeku/"+R.raw.vid;
         Uri uri2 = Uri.parse(uriPath2);
         video.setVideoURI(uri2);
         video.requestFocus();

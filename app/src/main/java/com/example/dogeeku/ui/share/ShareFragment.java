@@ -29,8 +29,10 @@ public class ShareFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_share, container, false);
 
 
-       ImageButton facebook = (ImageButton) root.findViewById(R.id.facebook);
+        ImageButton facebook = (ImageButton) root.findViewById(R.id.facebook);
         ImageButton instagram = (ImageButton) root.findViewById(R.id.instagram);
+        ImageButton whatsapp = (ImageButton) root.findViewById(R.id.whatsapp);
+        ImageButton email= (ImageButton) root.findViewById(R.id.email);
 
         facebook.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +40,7 @@ public class ShareFragment extends Fragment {
                 Intent i = new Intent();
                 i.setAction(Intent.ACTION_VIEW);
                 i.addCategory(Intent.CATEGORY_BROWSABLE);
-                i.setData(Uri.parse("https://developer.android.com/guide/topics/resources/string-resource?hl=id"));
+                i.setData(Uri.parse("https://www.facebook.com/"));
                 startActivity(i);
             }
         });
@@ -49,11 +51,33 @@ public class ShareFragment extends Fragment {
                 Intent i = new Intent();
                 i.setAction(Intent.ACTION_VIEW);
                 i.addCategory(Intent.CATEGORY_BROWSABLE);
-                i.setData(Uri.parse("https://developer.android.com/guide/topics/resources/string-resource?hl=id"));
+                i.setData(Uri.parse("https://www.instagram.com/"));
                 startActivity(i);
             }
         });
 
+        whatsapp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setAction(Intent.ACTION_VIEW);
+                i.addCategory(Intent.CATEGORY_BROWSABLE);
+                i.setData(Uri.parse("https://www.whatsapp.com/"));
+                startActivity(i);
+            }
+        });
+
+        email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"layananDogeeKu@gmail.com"});
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Email dari Aplikasi DogeeKu");
+                startActivity(Intent.createChooser(intent, "Ingin Mengirim Email ?"));
+
+            }
+        });
         return root;
     }
 }

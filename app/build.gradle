@@ -35,5 +35,5 @@ dependencies {
 
     implementation 'me.biubiubiu.justifytext:library:1.1'
 
-    compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
 }
