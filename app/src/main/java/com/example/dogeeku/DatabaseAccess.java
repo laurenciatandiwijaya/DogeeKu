@@ -115,4 +115,37 @@ public class DatabaseAccess {
         cursor.close();
         return list;
     }
+
+
+    public void insertReservasi(String anjingDB, String layananDB, String tanggalDB) {
+        ContentValues contentValue = new ContentValues();
+        contentValue.put("nama_anjing", anjingDB);
+        contentValue.put("nama_layanan", layananDB);
+        contentValue.put("tanggal", tanggalDB);
+        database.insert("reservasi", null, contentValue);
+    }
+
+    public List<String> getNama_Anjing() {
+        List<String> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT * FROM reservasi", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(1));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return list;
+    }
+
+    public List<String> getNama_Layanan() {
+        List<String> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT * FROM reservasi", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(2));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return list;
+    }
 }

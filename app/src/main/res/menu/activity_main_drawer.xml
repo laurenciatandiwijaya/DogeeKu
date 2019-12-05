@@ -19,10 +19,6 @@
                 android:title="@string/menu_shop" />
 
             <item
-            android:id="@+id/nav_pemesanan"
-            android:title="@string/menu_pemesanan" />
-
-            <item
                 android:id="@+id/nav_planner"
                 android:title="@string/menu_planner" />
 

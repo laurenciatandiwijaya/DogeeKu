@@ -7,8 +7,6 @@ import android.os.Bundle;
 import com.example.dogeeku.DatabaseAccess;
 import com.example.dogeeku.DatabaseOpenHelper;
 import com.example.dogeeku.MainActivity;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -40,8 +38,8 @@ public class LoginActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         dbHelper = new DatabaseOpenHelper(this);
 
-        email = (EditText) findViewById(R.id.emailLogin);
-        password = (EditText) findViewById(R.id.passwordLogin);
+        email = (EditText) findViewById(R.id.nama_anjing);
+        password = (EditText) findViewById(R.id.nama_layanan);
 
         Button button_back = (Button) findViewById(R.id.button_back);
         Button button_LOGIN = (Button) findViewById(R.id.login);
